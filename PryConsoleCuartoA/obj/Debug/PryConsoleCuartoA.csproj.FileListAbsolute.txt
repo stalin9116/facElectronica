@@ -4,3 +4,4 @@ C:\Users\IT\source\repos\PryConsoleCuartoA\PryConsoleCuartoA\bin\Debug\PryConsol
 C:\Users\IT\source\repos\PryConsoleCuartoA\PryConsoleCuartoA\obj\Debug\PryConsoleCuartoA.csproj.CoreCompileInputs.cache
 C:\Users\IT\source\repos\PryConsoleCuartoA\PryConsoleCuartoA\obj\Debug\PryConsoleCuartoA.exe
 C:\Users\IT\source\repos\PryConsoleCuartoA\PryConsoleCuartoA\obj\Debug\PryConsoleCuartoA.pdb
+C:\Users\IT\source\repos\PryConsoleCuartoA\PryConsoleCuartoA\obj\Debug\PryConsoleCuartoA.csprojAssemblyReference.cache

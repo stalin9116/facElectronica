@@ -5,6 +5,12 @@ VisualStudioVersion = 16.0.30104.148
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PryConsoleCuartoA", "PryConsoleCuartoA\PryConsoleCuartoA.csproj", "{D3ADE1E1-1023-42AD-8684-C691B00B4949}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PuntoVenta.WindowsForm", "PuntoVenta.WindowsForm\PuntoVenta.WindowsForm.csproj", "{819E3B98-43CC-4890-BED0-A95AF288F0AF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LayerData.ClassLibrary", "LayerData.ClassLibrary\LayerData.ClassLibrary.csproj", "{DB4A2031-EFBB-4172-8406-D34F833E8B1D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LayerLogic.ClassLibrary", "LayerLogic.ClassLibrary\LayerLogic.ClassLibrary.csproj", "{DFBEC716-D75F-4B2F-9FE7-22F6816A9BCF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +21,18 @@ Global
 		{D3ADE1E1-1023-42AD-8684-C691B00B4949}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D3ADE1E1-1023-42AD-8684-C691B00B4949}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D3ADE1E1-1023-42AD-8684-C691B00B4949}.Release|Any CPU.Build.0 = Release|Any CPU
+		{819E3B98-43CC-4890-BED0-A95AF288F0AF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{819E3B98-43CC-4890-BED0-A95AF288F0AF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{819E3B98-43CC-4890-BED0-A95AF288F0AF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{819E3B98-43CC-4890-BED0-A95AF288F0AF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DB4A2031-EFBB-4172-8406-D34F833E8B1D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DB4A2031-EFBB-4172-8406-D34F833E8B1D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DB4A2031-EFBB-4172-8406-D34F833E8B1D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DB4A2031-EFBB-4172-8406-D34F833E8B1D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DFBEC716-D75F-4B2F-9FE7-22F6816A9BCF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DFBEC716-D75F-4B2F-9FE7-22F6816A9BCF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DFBEC716-D75F-4B2F-9FE7-22F6816A9BCF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DFBEC716-D75F-4B2F-9FE7-22F6816A9BCF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

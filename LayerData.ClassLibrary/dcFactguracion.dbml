@@ -1,0 +1,86 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="BDELECTRONICOS01" Class="dcFactguracionDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=.\SQLEXPRESS;Initial Catalog=BDELECTRONICOS01;Integrated Security=True" SettingsObjectName="LayerData.ClassLibrary.Properties.Settings" SettingsPropertyName="BDELECTRONICOS01ConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.TBL_USUARIO" Member="TBL_USUARIO">
+    <Type Name="TBL_USUARIO">
+      <Column Name="usu_id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="usu_correo" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="usu_password" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="usu_apellidos" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="usu_nombres" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="usu_status" Type="System.Char" DbType="Char(1) NOT NULL" CanBeNull="false" />
+      <Column Name="usu_add" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="rol_id" Type="System.Byte" DbType="TinyInt NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Association Name="TBL_ROL_TBL_USUARIO" Member="TBL_ROL" ThisKey="rol_id" OtherKey="rol_id" Type="TBL_ROL" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.DETALLE_COMPROBANTE" Member="DETALLE_COMPROBANTE">
+    <Type Name="DETALLE_COMPROBANTE">
+      <Column Name="dec_id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="dec_codigoproducto" Type="System.String" DbType="NVarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="dec_cantidad" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="dec_descripcion" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="dec_precio" Type="System.Decimal" DbType="Decimal(8,4) NOT NULL" CanBeNull="false" />
+      <Column Name="dec_descuento" Type="System.Decimal" DbType="Decimal(8,4) NOT NULL" CanBeNull="false" />
+      <Column Name="dec_iva0" Type="System.Decimal" DbType="Decimal(8,4) NOT NULL" CanBeNull="false" />
+      <Column Name="dec_ivagravado" Type="System.Decimal" DbType="Decimal(8,4) NOT NULL" CanBeNull="false" />
+      <Column Name="dec_valortotal" Type="System.Decimal" DbType="Decimal(8,4) NOT NULL" CanBeNull="false" />
+      <Column Name="com_id" Type="System.Int64" DbType="BigInt NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="com_fecha" Type="System.DateTime" DbType="DateTime NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Association Name="COMPROBANTE_DETALLE_COMPROBANTE" Member="COMPROBANTE" ThisKey="com_id,com_fecha" OtherKey="com_id,com_fecha" Type="COMPROBANTE" IsForeignKey="true" />
+      <Association Name="COMPROBANTE_DETALLE_COMPROBANTE1" Member="COMPROBANTE1" ThisKey="com_id,com_fecha" OtherKey="com_id,com_fecha" Type="COMPROBANTE" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TBL_ROL" Member="TBL_ROL">
+    <Type Name="TBL_ROL">
+      <Column Name="rol_id" Type="System.Byte" DbType="TinyInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="rol_descripcion" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="rol_status" Type="System.Char" DbType="Char(1) NOT NULL" CanBeNull="false" />
+      <Column Name="rol_add" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Association Name="TBL_ROL_TBL_USUARIO" Member="TBL_USUARIO" ThisKey="rol_id" OtherKey="rol_id" Type="TBL_USUARIO" />
+    </Type>
+  </Table>
+  <Table Name="dbo.COMPROBANTE" Member="COMPROBANTE">
+    <Type Name="COMPROBANTE">
+      <Column Name="com_id" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="com_fecha" Type="System.DateTime" DbType="DateTime NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="com_orden" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="com_identificacion" Type="System.String" DbType="NVarChar(15) NOT NULL" CanBeNull="false" />
+      <Column Name="com_apellidos" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="com_nombres" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="com_direccion" Type="System.String" DbType="NVarChar(300) NOT NULL" CanBeNull="false" />
+      <Column Name="com_telefono" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="com_establecimiento" Type="System.String" DbType="Char(3) NOT NULL" CanBeNull="false" />
+      <Column Name="com_emision" Type="System.String" DbType="Char(3) NOT NULL" CanBeNull="false" />
+      <Column Name="com_secuencial" Type="System.String" DbType="Char(9) NOT NULL" CanBeNull="false" />
+      <Column Name="com_claveacceso" Type="System.String" DbType="Char(49) NOT NULL" CanBeNull="false" />
+      <Column Name="com_numeroautorizacion" Type="System.String" DbType="Char(49) NOT NULL" CanBeNull="false" />
+      <Column Name="com_fechaautorizacion" Type="System.String" DbType="NVarChar(30) NOT NULL" CanBeNull="false" />
+      <Column Name="com_subtotal0" Type="System.Decimal" DbType="Decimal(8,4) NOT NULL" CanBeNull="false" />
+      <Column Name="com_subtotalgravado" Type="System.Decimal" DbType="Decimal(8,4) NOT NULL" CanBeNull="false" />
+      <Column Name="com_iva0" Type="System.Decimal" DbType="Decimal(8,4) NOT NULL" CanBeNull="false" />
+      <Column Name="com_ivagravado" Type="System.Decimal" DbType="Decimal(8,4) NOT NULL" CanBeNull="false" />
+      <Column Name="com_estadosri" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="com_mensajesri" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="com_add" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="com_status" Type="System.Char" DbType="Char(1) NOT NULL" CanBeNull="false" />
+      <Column Name="com_update" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="com_delete" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="com_tipoIdentificacion" Type="System.String" DbType="VarChar(2) NOT NULL" CanBeNull="false" />
+      <Column Name="com_total" Type="System.Decimal" DbType="Decimal(8,4) NOT NULL" CanBeNull="false" />
+      <Column Name="com_totalDescuento" Type="System.Decimal" DbType="Decimal(8,4) NOT NULL" CanBeNull="false" />
+      <Association Name="COMPROBANTE_DETALLE_COMPROBANTE" Member="DETALLE_COMPROBANTE" ThisKey="com_id,com_fecha" OtherKey="com_id,com_fecha" Type="DETALLE_COMPROBANTE" />
+      <Association Name="COMPROBANTE_DETALLE_COMPROBANTE1" Member="DETALLE_COMPROBANTE1" ThisKey="com_id,com_fecha" OtherKey="com_id,com_fecha" Type="DETALLE_COMPROBANTE" />
+    </Type>
+  </Table>
+  <Function Name="dbo.spUpdateUsuario" Method="spUpdateUsuario">
+    <Parameter Name="id" Type="System.Int32" DbType="Int" />
+    <Parameter Name="correo" Type="System.String" DbType="NVarChar(100)" />
+    <Parameter Name="password" Type="System.String" DbType="NVarChar(100)" />
+    <Parameter Name="apellidos" Type="System.String" DbType="NVarChar(100)" />
+    <Parameter Name="nombres" Type="System.String" DbType="NVarChar(100)" />
+    <Parameter Name="rol" Type="System.Byte" DbType="TinyInt" />
+    <ElementType Name="spUpdateUsuarioResult">
+      <Column Name="" Member="Column1" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+</Database>

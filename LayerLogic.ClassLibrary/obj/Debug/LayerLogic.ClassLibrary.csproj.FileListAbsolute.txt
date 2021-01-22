@@ -1,0 +1,10 @@
+C:\Users\IT\source\repos\PryConsoleCuartoA\LayerLogic.ClassLibrary\bin\Debug\LayerLogic.ClassLibrary.dll
+C:\Users\IT\source\repos\PryConsoleCuartoA\LayerLogic.ClassLibrary\bin\Debug\LayerLogic.ClassLibrary.pdb
+C:\Users\IT\source\repos\PryConsoleCuartoA\LayerLogic.ClassLibrary\bin\Debug\LayerData.ClassLibrary.dll
+C:\Users\IT\source\repos\PryConsoleCuartoA\LayerLogic.ClassLibrary\bin\Debug\LayerData.ClassLibrary.pdb
+C:\Users\IT\source\repos\PryConsoleCuartoA\LayerLogic.ClassLibrary\obj\Debug\LayerLogic.ClassLibrary.csprojAssemblyReference.cache
+C:\Users\IT\source\repos\PryConsoleCuartoA\LayerLogic.ClassLibrary\obj\Debug\LayerLogic.ClassLibrary.csproj.CoreCompileInputs.cache
+C:\Users\IT\source\repos\PryConsoleCuartoA\LayerLogic.ClassLibrary\obj\Debug\LayerLogic.ClassLibrary.csproj.CopyComplete
+C:\Users\IT\source\repos\PryConsoleCuartoA\LayerLogic.ClassLibrary\obj\Debug\LayerLogic.ClassLibrary.dll
+C:\Users\IT\source\repos\PryConsoleCuartoA\LayerLogic.ClassLibrary\obj\Debug\LayerLogic.ClassLibrary.pdb
+C:\Users\IT\source\repos\PryConsoleCuartoA\LayerLogic.ClassLibrary\bin\Debug\LayerData.ClassLibrary.dll.config

@@ -1,0 +1,7 @@
+C:\Users\IT\source\repos\PryConsoleCuartoA\LayerData.ClassLibrary\bin\Debug\LayerData.ClassLibrary.dll
+C:\Users\IT\source\repos\PryConsoleCuartoA\LayerData.ClassLibrary\bin\Debug\LayerData.ClassLibrary.pdb
+C:\Users\IT\source\repos\PryConsoleCuartoA\LayerData.ClassLibrary\obj\Debug\LayerData.ClassLibrary.csproj.CoreCompileInputs.cache
+C:\Users\IT\source\repos\PryConsoleCuartoA\LayerData.ClassLibrary\obj\Debug\LayerData.ClassLibrary.dll
+C:\Users\IT\source\repos\PryConsoleCuartoA\LayerData.ClassLibrary\obj\Debug\LayerData.ClassLibrary.pdb
+C:\Users\IT\source\repos\PryConsoleCuartoA\LayerData.ClassLibrary\bin\Debug\LayerData.ClassLibrary.dll.config
+C:\Users\IT\source\repos\PryConsoleCuartoA\LayerData.ClassLibrary\obj\Debug\LayerData.ClassLibrary.csprojAssemblyReference.cache

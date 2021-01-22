@@ -44,6 +44,7 @@ namespace PryConsoleCuartoA
                 vehiculo.Estado = Console.ReadLine();
 
                 _listaVehiculos.Add(vehiculo);
+                
 
                 foreach (var item in _listaVehiculos.Where(data=>data.Estado.Equals("A")))
                 {

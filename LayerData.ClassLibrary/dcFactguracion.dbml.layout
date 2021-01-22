@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11.75, 10.125" name="dcFactguracion">
+  <DataContextMoniker Name="/dcFactguracionDataContext" />
+  <nestedChildShapes>
+    <classShape Id="1f5cc120-e887-41e7-a63a-7dde6b0b008e" absoluteBounds="9.5, 1, 2, 2.3478011067708335">
+      <DataClassMoniker Name="/dcFactguracionDataContext/TBL_USUARIO" />
+      <nestedChildShapes>
+        <elementListCompartment Id="9873748f-b2dd-46cf-86f7-4beed862e607" absoluteBounds="9.515, 1.46, 1.9700000000000002, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="be42803c-3d8a-489a-b44b-82598ec3d752" absoluteBounds="4.125, 2.625, 2, 2.9247054036458331">
+      <DataClassMoniker Name="/dcFactguracionDataContext/DETALLE_COMPROBANTE" />
+      <nestedChildShapes>
+        <elementListCompartment Id="ee27bee4-423f-4b31-8c1c-115bb09847df" absoluteBounds="4.1400000000000006, 3.085, 1.9700000000000002, 2.364705403645833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="2d8eba0d-296a-4edd-b410-439711a17f25" absoluteBounds="6.75, 1.375, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/dcFactguracionDataContext/TBL_ROL" />
+      <nestedChildShapes>
+        <elementListCompartment Id="8ed8a574-bdb9-4906-84db-060fac05f69e" absoluteBounds="6.765, 1.835, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(8.75 : 2.16429768880208); (9.5 : 2.16429768880208)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/dcFactguracionDataContext/TBL_ROL/TBL_ROL_TBL_USUARIO" />
+      <nodes>
+        <classShapeMoniker Id="2d8eba0d-296a-4edd-b410-439711a17f25" />
+        <classShapeMoniker Id="1f5cc120-e887-41e7-a63a-7dde6b0b008e" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="17639634-bb2f-4332-8251-dc88c8cb03a3" absoluteBounds="1.875, 3.875, 2, 6.0015283203125">
+      <DataClassMoniker Name="/dcFactguracionDataContext/COMPROBANTE" />
+      <nestedChildShapes>
+        <elementListCompartment Id="ad9e9087-8941-4c54-8add-cbfb08839e4a" absoluteBounds="1.8900000000000001, 4.335, 1.9700000000000002, 5.4415283203125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(3.875 : 4.71235270182292); (4.125 : 4.71235270182292)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/dcFactguracionDataContext/COMPROBANTE/COMPROBANTE_DETALLE_COMPROBANTE" />
+      <nodes>
+        <classShapeMoniker Id="17639634-bb2f-4332-8251-dc88c8cb03a3" />
+        <classShapeMoniker Id="be42803c-3d8a-489a-b44b-82598ec3d752" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(3.875 : 4.23117635091146); (4.125 : 4.23117635091146)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/dcFactguracionDataContext/COMPROBANTE/COMPROBANTE_DETALLE_COMPROBANTE1" />
+      <nodes>
+        <classShapeMoniker Id="17639634-bb2f-4332-8251-dc88c8cb03a3" />
+        <classShapeMoniker Id="be42803c-3d8a-489a-b44b-82598ec3d752" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>
