@@ -31,6 +31,120 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="bcmail-jdk15-1.43">
+      <HintPath>..\..\..\..\Desktop\dll Firma Electronica\bcmail-jdk15-1.43.dll</HintPath>
+    </Reference>
+    <Reference Include="bcprov-jdk15-1.43">
+      <HintPath>..\..\..\..\Desktop\dll Firma Electronica\bcprov-jdk15-1.43.dll</HintPath>
+    </Reference>
+    <Reference Include="bctsp-jdk15-1.43">
+      <HintPath>..\..\..\..\Desktop\dll Firma Electronica\bctsp-jdk15-1.43.dll</HintPath>
+    </Reference>
+    <Reference Include="commons-codec-1.2">
+      <HintPath>..\..\..\..\Desktop\dll Firma Electronica\commons-codec-1.2.dll</HintPath>
+    </Reference>
+    <Reference Include="commons-httpclient-3.0.1">
+      <HintPath>..\..\..\..\Desktop\dll Firma Electronica\commons-httpclient-3.0.1.dll</HintPath>
+    </Reference>
+    <Reference Include="commons-lang-2.4">
+      <HintPath>..\..\..\..\Desktop\dll Firma Electronica\commons-lang-2.4.dll</HintPath>
+    </Reference>
+    <Reference Include="commons-logging-1.1">
+      <HintPath>..\..\..\..\Desktop\dll Firma Electronica\commons-logging-1.1.dll</HintPath>
+    </Reference>
+    <Reference Include="facturaE_additional">
+      <HintPath>..\..\..\..\Desktop\dll Firma Electronica\facturaE_additional.dll</HintPath>
+    </Reference>
+    <Reference Include="IKVM.OpenJDK.Beans">
+      <HintPath>..\..\..\..\Desktop\dll Firma Electronica\IKVM.OpenJDK.Beans.dll</HintPath>
+    </Reference>
+    <Reference Include="IKVM.OpenJDK.Charsets">
+      <HintPath>..\..\..\..\Desktop\dll Firma Electronica\IKVM.OpenJDK.Charsets.dll</HintPath>
+    </Reference>
+    <Reference Include="IKVM.OpenJDK.Corba">
+      <HintPath>..\..\..\..\Desktop\dll Firma Electronica\IKVM.OpenJDK.Corba.dll</HintPath>
+    </Reference>
+    <Reference Include="IKVM.OpenJDK.Core">
+      <HintPath>..\..\..\..\Desktop\dll Firma Electronica\IKVM.OpenJDK.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="IKVM.OpenJDK.Jdbc">
+      <HintPath>..\..\..\..\Desktop\dll Firma Electronica\IKVM.OpenJDK.Jdbc.dll</HintPath>
+    </Reference>
+    <Reference Include="IKVM.OpenJDK.Management">
+      <HintPath>..\..\..\..\Desktop\dll Firma Electronica\IKVM.OpenJDK.Management.dll</HintPath>
+    </Reference>
+    <Reference Include="IKVM.OpenJDK.Media">
+      <HintPath>..\..\..\..\Desktop\dll Firma Electronica\IKVM.OpenJDK.Media.dll</HintPath>
+    </Reference>
+    <Reference Include="IKVM.OpenJDK.Misc">
+      <HintPath>..\..\..\..\Desktop\dll Firma Electronica\IKVM.OpenJDK.Misc.dll</HintPath>
+    </Reference>
+    <Reference Include="IKVM.OpenJDK.Naming">
+      <HintPath>..\..\..\..\Desktop\dll Firma Electronica\IKVM.OpenJDK.Naming.dll</HintPath>
+    </Reference>
+    <Reference Include="IKVM.OpenJDK.Remoting">
+      <HintPath>..\..\..\..\Desktop\dll Firma Electronica\IKVM.OpenJDK.Remoting.dll</HintPath>
+    </Reference>
+    <Reference Include="IKVM.OpenJDK.Security">
+      <HintPath>..\..\..\..\Desktop\dll Firma Electronica\IKVM.OpenJDK.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="IKVM.OpenJDK.SwingAWT">
+      <HintPath>..\..\..\..\Desktop\dll Firma Electronica\IKVM.OpenJDK.SwingAWT.dll</HintPath>
+    </Reference>
+    <Reference Include="IKVM.OpenJDK.Text">
+      <HintPath>..\..\..\..\Desktop\dll Firma Electronica\IKVM.OpenJDK.Text.dll</HintPath>
+    </Reference>
+    <Reference Include="IKVM.OpenJDK.Util">
+      <HintPath>..\..\..\..\Desktop\dll Firma Electronica\IKVM.OpenJDK.Util.dll</HintPath>
+    </Reference>
+    <Reference Include="IKVM.OpenJDK.XML.API">
+      <HintPath>..\..\..\..\Desktop\dll Firma Electronica\IKVM.OpenJDK.XML.API.dll</HintPath>
+    </Reference>
+    <Reference Include="IKVM.OpenJDK.XML.Bind">
+      <HintPath>..\..\..\..\Desktop\dll Firma Electronica\IKVM.OpenJDK.XML.Bind.dll</HintPath>
+    </Reference>
+    <Reference Include="IKVM.OpenJDK.XML.Crypto">
+      <HintPath>..\..\..\..\Desktop\dll Firma Electronica\IKVM.OpenJDK.XML.Crypto.dll</HintPath>
+    </Reference>
+    <Reference Include="IKVM.OpenJDK.XML.Parse">
+      <HintPath>..\..\..\..\Desktop\dll Firma Electronica\IKVM.OpenJDK.XML.Parse.dll</HintPath>
+    </Reference>
+    <Reference Include="IKVM.OpenJDK.XML.RelaxNG">
+      <HintPath>..\..\..\..\Desktop\dll Firma Electronica\IKVM.OpenJDK.XML.RelaxNG.dll</HintPath>
+    </Reference>
+    <Reference Include="IKVM.OpenJDK.XML.Transform">
+      <HintPath>..\..\..\..\Desktop\dll Firma Electronica\IKVM.OpenJDK.XML.Transform.dll</HintPath>
+    </Reference>
+    <Reference Include="IKVM.OpenJDK.XML.WebServices">
+      <HintPath>..\..\..\..\Desktop\dll Firma Electronica\IKVM.OpenJDK.XML.WebServices.dll</HintPath>
+    </Reference>
+    <Reference Include="IKVM.OpenJDK.XML.XPath">
+      <HintPath>..\..\..\..\Desktop\dll Firma Electronica\IKVM.OpenJDK.XML.XPath.dll</HintPath>
+    </Reference>
+    <Reference Include="IKVM.Runtime">
+      <HintPath>..\..\..\..\Desktop\dll Firma Electronica\IKVM.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="jss-4.2.5">
+      <HintPath>..\..\..\..\Desktop\dll Firma Electronica\jss-4.2.5.dll</HintPath>
+    </Reference>
+    <Reference Include="MITyCLibAPI-1.0.4">
+      <HintPath>..\..\..\..\Desktop\dll Firma Electronica\MITyCLibAPI-1.0.4.dll</HintPath>
+    </Reference>
+    <Reference Include="MITyCLibCert-1.0.4">
+      <HintPath>..\..\..\..\Desktop\dll Firma Electronica\MITyCLibCert-1.0.4.dll</HintPath>
+    </Reference>
+    <Reference Include="MITyCLibPolicy-1.0.4">
+      <HintPath>..\..\..\..\Desktop\dll Firma Electronica\MITyCLibPolicy-1.0.4.dll</HintPath>
+    </Reference>
+    <Reference Include="MITyCLibTrust-1.0.4">
+      <HintPath>..\..\..\..\Desktop\dll Firma Electronica\MITyCLibTrust-1.0.4.dll</HintPath>
+    </Reference>
+    <Reference Include="MITyCLibTSA-1.0.4">
+      <HintPath>..\..\..\..\Desktop\dll Firma Electronica\MITyCLibTSA-1.0.4.dll</HintPath>
+    </Reference>
+    <Reference Include="MITyCLibXADES-1.0.4">
+      <HintPath>..\..\..\..\Desktop\dll Firma Electronica\MITyCLibXADES-1.0.4.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data.Linq" />
@@ -40,8 +154,13 @@
     <Reference Include="System.Data" />
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Xml" />
+    <Reference Include="xmlsec-1.4.2-ADSI-1.0">
+      <HintPath>..\..\..\..\Desktop\dll Firma Electronica\xmlsec-1.4.2-ADSI-1.0.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Complementos\Encriptar.cs" />
+    <Compile Include="Complementos\Firmar.cs" />
     <Compile Include="LogicRol.cs" />
     <Compile Include="LogicUsuario.cs" />
     <Compile Include="objetos\DatosElectronicos.cs" />
@@ -56,7 +175,6 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Complementos\" />
     <Folder Include="Validaciones\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

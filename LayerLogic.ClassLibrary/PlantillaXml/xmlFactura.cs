@@ -98,7 +98,7 @@ namespace LayerLogic.ClassLibrary.PlantillaXml
 
 
             XDocument doc = new XDocument(
-                new XDeclaration("1.0", "urf-8", "no")
+                new XDeclaration("1.0", "utf-8", "no")
                 
                 );
 

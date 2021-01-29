@@ -168,6 +168,36 @@ namespace LayerLogic.ClassLibrary
 
         }
 
+        public static bool saveListUser(List<TBL_USUARIO> _ListUsuario)
+        {
+
+            try
+            {
+                bool res = false;
+                dc = new dcFactguracionDataContext();
+
+                foreach (var item in _ListUsuario)
+                {
+                    item.usu_add = DateTime.Now;
+                    item.usu_status = 'A';
+                }
+                
+                //enviar mi objeto al orm
+                dc.TBL_USUARIO.InsertAllOnSubmit(_ListUsuario);
+                //commit de la base
+                dc.SubmitChanges();
+                res = true;
+                return res;
+
+            }
+            catch (Exception ex)
+            {
+                //Archivos de log
+                throw new ArgumentException("Error al guardar un usuario " + ex.Message);
+            }
+
+        }
+
         public static bool updateUser(TBL_USUARIO _infoUsuario)
         {
 
