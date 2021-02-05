@@ -6,7 +6,10 @@ using System.Threading.Tasks;
 
 namespace PuntoVenta.WindowsForm.SRI
 {
-    class logicPrueba
+    public class logicPrueba
     {
+        public int IdWebServices { get; set; }
+        public String WebServices { get; set; }
+
     }
 }
