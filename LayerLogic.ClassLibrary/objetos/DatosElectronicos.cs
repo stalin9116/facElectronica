@@ -1,4 +1,5 @@
-﻿using System;
+﻿using LayerData.ClassLibrary;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -16,6 +17,10 @@ namespace LayerLogic.ClassLibrary.objetos
         //public XDocument Comprobante { get; set; }
         public string Base64 { get; set; }
         public string ComprobanteFirmado { get; set; }
+        public COMPROBANTE comprobate { get; set; }
+        public string statusSRI { get; set; }
+        public string mensajeSRI { get; set; }
+        public string identificadorSri { get; set; }
         public DatosElectronicos()
         {
 

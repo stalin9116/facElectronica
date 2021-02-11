@@ -65,41 +65,69 @@ namespace PuntoVenta.WindowsForm
         private void button1_Click(object sender, EventArgs e)
         {
 
-            logicSRI.sendClaveAcceso("1301202101179282192400120010050000298690002986913");
+            logicSRI.sendClaveAcceso("1002202101080189518600120011000000004001234567818");
+
+            #region Construccion Info Factura
 
             List<DETALLE_COMPROBANTE> _listaDetalle = new List<DETALLE_COMPROBANTE>();
 
             DETALLE_COMPROBANTE _infoDetalle = new DETALLE_COMPROBANTE();
             _infoDetalle.dec_id = 1;
             _infoDetalle.dec_cantidad = 1;
-            _infoDetalle.dec_codigoproducto = "PRO001";
-            _infoDetalle.dec_descripcion = "COMPUTADOR";
+            _infoDetalle.dec_codigoproducto = "300";
+            _infoDetalle.dec_descripcion = "ACTUALIZACION SISTEMA TRIBUTARIO SITAC";
             _infoDetalle.dec_descuento = 0;
             _infoDetalle.dec_iva0 = 0;
-            _infoDetalle.dec_precio = 1000;
-            _infoDetalle.dec_ivagravado = 120;
-            _infoDetalle.dec_valortotal = 1120;
+            _infoDetalle.dec_precio = 120;
+            _infoDetalle.dec_ivagravado = Convert.ToDecimal("14.40");
+            
+            _infoDetalle.dec_valortotal = Convert.ToDecimal("134.40");
 
-            DETALLE_COMPROBANTE _infoDetalle2 = new DETALLE_COMPROBANTE();
-            _infoDetalle2.dec_id = 2;
-            _infoDetalle2.dec_cantidad = 1;
-            _infoDetalle2.dec_codigoproducto = "PRO002";
-            _infoDetalle2.dec_descripcion = "TECLADO";
-            _infoDetalle2.dec_descuento = 0;
-            _infoDetalle2.dec_iva0 = 0;
-            _infoDetalle2.dec_precio = 100;
-            _infoDetalle2.dec_ivagravado = 12;
-            _infoDetalle2.dec_valortotal = 112;
+            //DETALLE_COMPROBANTE _infoDetalle2 = new DETALLE_COMPROBANTE();
+            //_infoDetalle2.dec_id = 2;
+            //_infoDetalle2.dec_cantidad = 1;
+            //_infoDetalle2.dec_codigoproducto = "PRO002";
+            //_infoDetalle2.dec_descripcion = "TECLADO";
+            //_infoDetalle2.dec_descuento = 0;
+            //_infoDetalle2.dec_iva0 = 0;
+            //_infoDetalle2.dec_precio = 100;
+            //_infoDetalle2.dec_ivagravado = 12;
+            //_infoDetalle2.dec_valortotal = 112;
 
             _listaDetalle.Add(_infoDetalle);
-            _listaDetalle.Add(_infoDetalle2);
+            //_listaDetalle.Add(_infoDetalle2);
 
             COMPROBANTE _infoComprobante = new COMPROBANTE();
+            _infoComprobante.com_apellidos = "MEJIA";
+            _infoComprobante.com_nombres = "STALIN";
+            _infoComprobante.com_direccion = "LA KENNEDY";
+            _infoComprobante.com_tipoIdentificacion = "C";
+            _infoComprobante.com_identificacion = "1725667065";
+            _infoComprobante.com_fecha = DateTime.Now;
+
+            _infoComprobante.com_establecimiento = "001";
+            _infoComprobante.com_emision = "100";
+            _infoComprobante.com_secuencial = "000000400";
+
+            _infoComprobante.com_subtotalgravado = 120;
+            _infoComprobante.com_totalDescuento = 0;
+            _infoComprobante.com_ivagravado = Convert.ToDecimal("14.40");
+            _infoComprobante.com_total = Convert.ToDecimal("134.40");
+
 
             DatosElectronicos _infoDatosElectronicos = new DatosElectronicos();
+            _infoDatosElectronicos.ambiente = "2";
+            _infoDatosElectronicos.comprobate = _infoComprobante;
+            _infoDatosElectronicos.ClaveAcceso = "1002202101080189518600120011000000004001234567818";
 
 
-            var res = LayerLogic.ClassLibrary.PlantillaXml.xmlFactura.generateFacturaXml(_infoComprobante, _listaDetalle, _infoDatosElectronicos);
+            #endregion
+
+
+
+            #region Generar Xml y Firmado
+
+            var res = LayerLogic.ClassLibrary.PlantillaXml.xmlFactura.generateFacturaXml(_listaDetalle, _infoDatosElectronicos);
 
             //Convert Base 64
             string xmlSinFirma = res.Declaration.ToString() + res.ToString();
@@ -107,9 +135,17 @@ namespace PuntoVenta.WindowsForm
             newByte = Encoding.UTF8.GetBytes(xmlSinFirma);
             string base64 = Convert.ToBase64String(newByte);
 
-            LayerLogic.ClassLibrary.Complementos.Firmar.firmar(base64);
+            string xmlFirmado = LayerLogic.ClassLibrary.Complementos.Firmar.firmar(base64);
+            _infoDatosElectronicos.Base64 = xmlFirmado;
+
+            #endregion
 
 
+            #region Envio Sri Web service Recepcion
+
+            var resWebService = logicSRI.sendXmlFirmadoWSSriProducción(_infoDatosElectronicos); 
+            
+            #endregion
 
             res.Save(@"C:\XML\result.xml");
 

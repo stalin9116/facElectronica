@@ -60,11 +60,13 @@ namespace LayerLogic.ClassLibrary.Complementos
         }
 
 
-        public static void firmar(string Archivo)
+        public static string firmar(string Archivo)
         {
             string path = @"C:\Firma\fabricio_fortunato_mero_mosquera.p12";
             PrivateKey privatekey;
             Provider provider;
+            string resultado = "";
+
 
             java.security.cert.X509Certificate certificate = LayerLogic.ClassLibrary.Complementos.Firmar.loadCertificate(path, "FFmm_1978", out privatekey, out provider);
             if (certificate!=null)
@@ -109,9 +111,11 @@ namespace LayerLogic.ClassLibrary.Complementos
                 var base642 = System.Convert.FromBase64String(firmado);
                 string bytes2 = System.Text.Encoding.UTF8.GetString(base642);
 
-
+                resultado = firmado;
 
             }
+
+            return resultado;
 
 
         }

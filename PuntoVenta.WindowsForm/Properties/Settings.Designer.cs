@@ -46,5 +46,16 @@ namespace PuntoVenta.WindowsForm.Properties {
                     "Service"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.WebServiceUrl)]
+        [global::System.Configuration.DefaultSettingValueAttribute("https://cel.sri.gob.ec/comprobantes-electronicos-ws/RecepcionComprobantesOffline")]
+        public string PuntoVenta_WindowsForm_wsSriRecepcionProduccion_RecepcionComprobantesOfflineService {
+            get {
+                return ((string)(this["PuntoVenta_WindowsForm_wsSriRecepcionProduccion_RecepcionComprobantesOfflineServi" +
+                    "ce"]));
+            }
+        }
     }
 }
